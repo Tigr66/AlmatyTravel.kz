@@ -103,14 +103,11 @@
 .winter-sidebar,
 .winter-content__page {
     min-width: 0;
-    border: 1px solid var(--color-border);
-    border-radius: 14px;
-    background: var(--color-background);
 }
 
 .winter-sidebar {
     align-self: start;
-    padding: 8px 16px;
+    padding: 0;
 }
 
 .winter-sidebar__nav {
@@ -119,18 +116,14 @@
 }
 
 .winter-sidebar__link {
+    position: relative;
     display: block;
-    padding: 13px 8px;
-    border-bottom: 1px solid var(--color-background-soft);
+    padding: 11px 0;
     color: var(--color-primary-dark);
     font-size: 15px;
     line-height: 1.35;
     text-decoration: none;
-    transition: color 140ms ease, background-color 140ms ease;
-}
-
-.winter-sidebar__link:last-child {
-    border-bottom: 0;
+    transition: color 140ms ease;
 }
 
 .winter-sidebar__link:hover,
@@ -142,9 +135,19 @@
     font-weight: 700;
 }
 
+.winter-sidebar__link--active::before {
+    position: absolute;
+    top: 12px;
+    bottom: 12px;
+    left: -12px;
+    width: 2px;
+    background: var(--color-accent-yellow);
+    content: "";
+}
+
 .winter-content__page {
     min-height: 420px;
-    padding: 24px;
+    padding: 0;
 }
 
 @media (max-width: 1050px) {
@@ -159,8 +162,32 @@
     }
 
     .winter-content {
-        grid-template-columns: minmax(210px, 250px) minmax(0, 1fr);
-        gap: 20px;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .winter-sidebar {
+        padding-bottom: 12px;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .winter-sidebar__nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 4px 22px;
+    }
+
+    .winter-sidebar__link {
+        padding: 5px 0;
+    }
+
+    .winter-sidebar__link--active::before {
+        top: auto;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: auto;
+        height: 2px;
     }
 }
 
@@ -213,16 +240,23 @@
     }
 
     .winter-sidebar {
-        max-height: 300px;
-        overflow-y: auto;
+        overflow-x: auto;
+    }
+
+    .winter-sidebar__nav {
+        width: max-content;
+        min-width: 100%;
+        flex-wrap: nowrap;
+        gap: 20px;
     }
 
     .winter-sidebar__link {
-        padding-block: 11px;
+        flex: 0 0 auto;
+        padding-block: 7px;
+        font-size: 13px;
     }
 
     .winter-content__page {
         min-height: 300px;
-        padding: 18px;
     }
 }
