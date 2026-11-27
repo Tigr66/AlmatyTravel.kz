@@ -1,0 +1,198 @@
+.winter-page {
+    min-height: 100vh;
+    overflow: hidden;
+    background: var(--color-background-soft);
+    color: var(--color-primary-dark);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.winter-hero {
+    display: flex;
+    flex-direction: column;
+    min-height: min(820px, 100svh);
+    isolation: isolate;
+    background-color: var(--color-background-blue);
+    background-image: url("/backgrounds/summer-backgrond.jpg");
+    background-repeat: no-repeat;
+    background-position: center 44%;
+    background-size: cover;
+}
+
+.winter-hero__content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 50px;
+}
+
+.winter-hero__eyebrow {
+    margin-bottom: 8px;
+    font-size: 17px;
+    line-height: 1.4;
+}
+
+.winter-hero h1 {
+    max-width: 620px;
+    font-size: clamp(36px, 3.1vw, 50px);
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    line-height: 1.08;
+}
+
+.winter-hero__subtitle {
+    margin-top: 14px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.winter-hero__button {
+    display: inline-flex;
+    min-width: 174px;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+    padding: 14px 22px;
+    border-radius: 28px;
+    background: var(--color-accent-yellow);
+    color: var(--color-primary-dark);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.winter-hero__button svg {
+    width: 16px;
+    height: 16px;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.8;
+}
+
+.winter-hero__pagination {
+    display: flex;
+    gap: 9px;
+    margin-top: 30px;
+}
+
+.winter-hero__pagination span {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: rgb(23 107 155 / 30%);
+}
+
+.winter-hero__pagination .is-active {
+    background: var(--color-primary);
+}
+
+.winter-hero__quick-links {
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    display: flex;
+    width: min(584px, calc(100% - 40px));
+    min-height: 64px;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 12px;
+    border: 1px solid rgb(255 255 255 / 76%);
+    border-radius: 28px 28px 0 0;
+    background: var(--color-background);
+    transform: translateX(-50%);
+}
+
+.winter-hero__quick-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 12px;
+    color: var(--color-primary-dark);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.winter-hero__quick-links a + a {
+    border-left: 1px solid var(--color-border);
+}
+
+.winter-hero__quick-links span {
+    color: var(--color-primary);
+    font-size: 20px;
+}
+
+.winter-page__next {
+    min-height: 72px;
+    background: var(--color-background-soft);
+}
+
+@media (max-width: 1050px) {
+    .winter-hero {
+        min-height: 760px;
+        background-position: 58% center;
+    }
+
+    .winter-hero__content {
+        width: min(100% - 40px, 900px);
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .winter-hero {
+        min-height: max(720px, 100svh);
+        background-position: 57% center;
+    }
+
+    .winter-hero::before {
+        background: rgb(240 243 246 / 48%);
+    }
+
+    .winter-hero__content {
+        width: calc(100% - 40px);
+        margin-top: 42px;
+        padding-bottom: 112px;
+    }
+
+    .winter-hero__eyebrow {
+        font-size: 14px;
+    }
+
+    .winter-hero h1 {
+        max-width: 480px;
+        font-size: clamp(34px, 10vw, 44px);
+        letter-spacing: -0.03em;
+        line-height: 1.1;
+    }
+
+    .winter-hero__subtitle {
+        max-width: 280px;
+        font-size: 16px;
+    }
+
+    .winter-hero__quick-links {
+        width: calc(100% - 24px);
+        min-height: 58px;
+        padding: 0 4px;
+        border-radius: 24px 24px 0 0;
+    }
+
+    .winter-hero__quick-links a {
+        gap: 5px;
+        padding: 0 6px;
+        font-size: 11px;
+    }
+
+    .winter-hero__quick-links span {
+        font-size: 16px;
+    }
+
+    .winter-page__next {
+        min-height: 32px;
+    }
+}
