@@ -3,11 +3,9 @@ import "./Header.css";
 
 type HeaderProps = {
     homePath: string;
-    seasonPath: string;
-    seasonLabel: string;
 };
 
-const Header = ({ homePath, seasonPath, seasonLabel }: HeaderProps) => {
+const Header = ({ homePath }: HeaderProps) => {
     return (
         <header className="site-header">
             <Link
@@ -40,9 +38,6 @@ const Header = ({ homePath, seasonPath, seasonLabel }: HeaderProps) => {
                         Рус
                     </button>
                 </div>
-                <Link className="site-header__season" to={seasonPath}>
-                    {seasonLabel} <span aria-hidden="true">↗</span>
-                </Link>
             </div>
         </header>
     );

@@ -44,19 +44,6 @@
     gap: 6px;
 }
 
-.site-header__season {
-    color: inherit;
-    font-size: 11px;
-    text-decoration: none;
-    text-underline-offset: 3px;
-    transition: color 140ms ease;
-}
-
-.site-header__season:hover {
-    color: var(--color-primary);
-    text-decoration: underline;
-}
-
 .site-header__languages {
     display: flex;
     align-items: center;
@@ -129,10 +116,6 @@
 
     .site-header__languages button {
         font-size: 12px;
-    }
-
-    .site-header__season {
-        font-size: 9px;
     }
 
     .site-header__details {

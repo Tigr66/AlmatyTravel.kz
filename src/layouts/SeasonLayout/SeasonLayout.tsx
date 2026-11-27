@@ -1,6 +1,6 @@
 import { Header } from "@/components/Header";
 import { getSeasonRoute, type SeasonRouteKey, type SiteSeason } from "@/routes/season-routes";
-import { NavLink, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 import "./SeasonLayout.css";
 
 type SeasonLayoutProps = {
@@ -29,7 +29,6 @@ const SeasonLayout = ({ season }: SeasonLayoutProps) => {
         about: getSeasonRoute(season, "about"),
         order: getSeasonRoute(season, "order"),
         contacts: getSeasonRoute(season, "contacts"),
-        alternate: getSeasonRoute(season === "winter" ? "summer" : "winter", "main"),
     };
 
     return (
@@ -37,8 +36,6 @@ const SeasonLayout = ({ season }: SeasonLayoutProps) => {
             <div className="site-hero">
                 <Header
                     homePath={routes.home}
-                    seasonPath={routes.alternate}
-                    seasonLabel={season === "winter" ? "Летняя версия" : "Зимняя версия"}
                 />
                 <section className="site-hero__content" aria-labelledby="site-hero-title">
                     <h1 id="site-hero-title">
@@ -51,6 +48,25 @@ const SeasonLayout = ({ season }: SeasonLayoutProps) => {
                             ? "Вы сами управляете своим отдыхом"
                             : "Частные поездки, горные маршруты и впечатления на природе"}
                     </p>
+                    <nav className="site-season-switch" aria-label="Выбор сезона">
+                        <Link
+                            className={`site-season-switch__link${season === "winter" ? " site-season-switch__link--active" : ""}`}
+                            to={getSeasonRoute("winter", "main")}
+                            aria-current={season === "winter" ? "page" : undefined}
+                        >
+                            Зима
+                        </Link>
+                        <span className="site-season-switch__divider" aria-hidden="true">
+                            /
+                        </span>
+                        <Link
+                            className={`site-season-switch__link${season === "summer" ? " site-season-switch__link--active" : ""}`}
+                            to={getSeasonRoute("summer", "main")}
+                            aria-current={season === "summer" ? "page" : undefined}
+                        >
+                            Лето
+                        </Link>
+                    </nav>
                 </section>
 
                 <nav className="site-hero__quick-links" aria-label="Основные разделы">
