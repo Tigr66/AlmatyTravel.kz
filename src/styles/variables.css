@@ -1,0 +1,28 @@
+:root {
+    /* Primary */
+    --color-primary: #176b9b;
+    --color-primary-dark: #183b55;
+    --color-primary-light: #a8cde0;
+
+    /* Backgrounds */
+    --color-background: #ffffff;
+    --color-background-blue: #d0e5ec;
+    --color-background-soft: #f0f3f6;
+
+    /* Accent */
+    --color-accent-green: #9ccb69;
+    --color-accent-yellow: #f9c51c;
+    --color-accent-whatsapp: #20c96b;
+
+    /* Text */
+    --color-text: #171717;
+    --color-text-secondary: #777777;
+    --color-text-light: #ffffff;
+
+    /* Borders */
+    --color-border: #d5dde2;
+
+    /* Links */
+    --color-link: #176b9b;
+    --color-link-hover: #183b55;
+}
