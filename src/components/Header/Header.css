@@ -123,3 +123,78 @@
     }
 
 }
+
+.site-header {
+    left: 50%;
+    width: min(calc(100% - 11vw), 1440px);
+    min-height: 84px;
+    padding: 10px 0;
+    border: 0;
+    background: transparent;
+    transform: translateX(-50%);
+}
+
+.site-brand__icon {
+    width: 88px;
+    height: 54px;
+}
+
+.site-brand__name {
+    font-size: 11px;
+    letter-spacing: 0.045em;
+}
+
+.site-header__details {
+    gap: 7px 18px;
+}
+
+.site-header__details a {
+    font-size: 12px;
+    font-weight: 600;
+    transition: color 180ms ease;
+}
+
+.site-header__details a:hover,
+.site-header__languages button:hover {
+    color: var(--color-primary);
+}
+
+.site-header__contact {
+    gap: 3px;
+}
+
+.site-header__languages {
+    gap: 16px;
+}
+
+.site-header__languages button {
+    padding-bottom: 3px;
+    font-size: 11px;
+    transition: color 180ms ease;
+}
+
+.site-brand:focus-visible,
+.site-header a:focus-visible,
+.site-header button:focus-visible {
+    outline: 2px solid var(--color-accent-yellow);
+    outline-offset: 4px;
+}
+
+@media (max-width: 1050px) {
+    .site-header {
+        width: min(calc(100% - 40px), 900px);
+    }
+}
+
+@media (max-width: 600px) {
+    .site-header {
+        width: calc(100% - 40px);
+        min-height: 60px;
+        padding-block: 8px;
+    }
+
+    .site-brand__icon {
+        width: 64px;
+        height: 42px;
+    }
+}

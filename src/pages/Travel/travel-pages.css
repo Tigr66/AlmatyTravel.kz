@@ -1115,3 +1115,499 @@
         grid-column: 1;
     }
 }
+
+/* Shared editorial treatment for the seasonal travel pages. */
+.site-content__page article {
+    position: relative;
+    color: var(--color-primary-dark);
+}
+
+.site-content__page article h2,
+.site-content__page article h3,
+.site-content__page article h4 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 500;
+}
+
+.site-content__page article h2 {
+    max-width: 19ch;
+    font-size: clamp(36px, 4.5vw, 62px);
+    letter-spacing: -0.05em;
+    line-height: 1.02;
+}
+
+.site-content__page article h3 {
+    font-size: clamp(23px, 2.5vw, 34px);
+    letter-spacing: -0.035em;
+    line-height: 1.1;
+}
+
+.site-content__page article h4 {
+    font-size: clamp(19px, 2vw, 25px);
+    letter-spacing: -0.025em;
+    line-height: 1.15;
+}
+
+.site-content__page article p:not(.travel-kicker):not(.travel-season-note) {
+    max-width: 62ch;
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+.site-content__page .travel-kicker {
+    padding-left: 12px;
+    border-left: 1px solid var(--color-accent-yellow);
+    color: var(--color-primary);
+    font-size: 10px;
+    letter-spacing: 0.16em;
+}
+
+.site-content__page figure {
+    min-width: 0;
+    overflow: hidden;
+}
+
+.site-content__page figure img,
+.site-content__page article > img,
+.site-content__page article div > img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 900ms cubic-bezier(0.2, 0.7, 0.2, 1), filter 500ms ease;
+}
+
+.site-content__page figure:hover img,
+.site-content__page article img:hover {
+    filter: saturate(1.04);
+    transform: scale(1.035);
+}
+
+.site-content__page figcaption {
+    padding-top: 10px;
+    color: var(--color-text-secondary);
+    font-size: 11px;
+    line-height: 1.55;
+}
+
+.site-content__page .site-reveal img {
+    transform: scale(1.025);
+}
+
+.site-content__page .site-reveal.is-visible img {
+    transform: scale(1);
+}
+
+.site-content__page .site-reveal.is-visible figure:hover img,
+.site-content__page .site-reveal.is-visible img:hover {
+    transform: scale(1.035);
+}
+
+.travel-page-link {
+    position: relative;
+    gap: 14px;
+    padding: 5px 0;
+    border: 0;
+    color: var(--color-primary-dark);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.travel-page-link::after {
+    position: absolute;
+    right: 22px;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background: var(--color-accent-yellow);
+    content: "";
+    transform: scaleX(0.28);
+    transform-origin: left;
+    transition: transform 260ms ease;
+}
+
+.travel-page-link:hover::after,
+.travel-page-link:focus-visible::after {
+    transform: scaleX(1);
+}
+
+.travel-home-page__heading {
+    gap: clamp(28px, 6vw, 88px);
+    margin-bottom: clamp(32px, 5vw, 70px);
+}
+
+.travel-home-page__heading > div h2 {
+    max-width: 15ch;
+}
+
+.travel-home-page__heading > p {
+    max-width: 35ch;
+    padding-bottom: 6px;
+}
+
+.travel-home-page__photo {
+    width: 88%;
+    margin: 0 0 clamp(58px, 8vw, 112px) auto;
+}
+
+.travel-home-page__photo img {
+    height: clamp(300px, 44vw, 560px);
+    object-position: center 48%;
+}
+
+.travel-home-page__next {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    gap: clamp(28px, 6vw, 92px);
+    padding-top: 28px;
+    border-top: 1px solid var(--color-border);
+}
+
+.travel-home-page__next h3 {
+    max-width: 16ch;
+}
+
+.travel-home-page__next nav {
+    gap: 17px 32px;
+}
+
+.travel-company-page > header,
+.travel-tours-page__intro,
+.travel-mountain-page > header,
+.travel-flight-page > div:first-child,
+.travel-buggy-page > header,
+.travel-translator-page > header,
+.travel-driver-page > header,
+.travel-yurts-page > header,
+.travel-freeride-page > header {
+    margin-bottom: clamp(30px, 5vw, 62px);
+}
+
+.travel-company-page > header h2,
+.travel-tours-page__intro h2,
+.travel-mountain-page > header h2,
+.travel-flight-page > div:first-child h2,
+.travel-buggy-page > header h2,
+.travel-translator-page > header h2,
+.travel-driver-page > header h2,
+.travel-yurts-page > header h2,
+.travel-freeride-page > header h2 {
+    margin-bottom: 15px;
+}
+
+.travel-company-page__feature {
+    grid-template-columns: minmax(0, 1.1fr) minmax(230px, 0.75fr);
+    align-items: start;
+    gap: clamp(28px, 6vw, 92px);
+}
+
+.travel-company-page__feature img {
+    height: clamp(300px, 38vw, 500px);
+}
+
+.travel-company-page__feature figcaption {
+    font-size: 11px;
+}
+
+.travel-company-page__feature dl {
+    margin-block: 24px;
+}
+
+.travel-company-page__feature dl div {
+    grid-template-columns: minmax(115px, 0.55fr) 1fr;
+    padding-block: 13px;
+    font-size: 12px;
+}
+
+.travel-tours-page__index {
+    gap: 12px 24px;
+    padding-block: 18px;
+    margin-bottom: 30px;
+}
+
+.travel-tours-page__index a {
+    position: relative;
+    padding-bottom: 5px;
+    font-size: 12px;
+}
+
+.travel-tours-page__index a::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background: var(--color-accent-yellow);
+    content: "";
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 220ms ease;
+}
+
+.travel-tours-page__index a:hover::after,
+.travel-tours-page__index a:focus-visible::after {
+    transform: scaleX(1);
+}
+
+.travel-tours-city,
+.travel-tours-lake,
+.travel-tours-lakes,
+.travel-tours-gorges,
+.travel-tours-canyon {
+    scroll-margin-top: 24px;
+    gap: clamp(24px, 5vw, 68px);
+    padding-block: clamp(38px, 6vw, 84px);
+}
+
+.travel-tours-city img,
+.travel-tours-lake > img {
+    height: clamp(300px, 37vw, 500px);
+}
+
+.travel-tours-lakes__kolsai img {
+    height: clamp(270px, 36vw, 450px);
+}
+
+.travel-tours-lakes__kaindy img {
+    height: clamp(220px, 27vw, 340px);
+}
+
+.travel-tours-gorges__turgen img,
+.travel-tours-canyon__charyn img {
+    height: clamp(270px, 34vw, 440px);
+}
+
+.travel-tours-gorges__butakovka img,
+.travel-tours-canyon__dune img {
+    height: clamp(210px, 25vw, 330px);
+}
+
+.travel-tours-lakes > header,
+.travel-tours-gorges > header {
+    max-width: 680px;
+    margin-bottom: 6px;
+}
+
+.travel-tours-gorges__turgen div {
+    grid-template-columns: minmax(100px, 0.4fr) minmax(0, 1fr);
+    padding-top: 16px;
+}
+
+.travel-mountain-page__photo img,
+.travel-flight-page figure img,
+.travel-buggy-page__main > img,
+.travel-driver-page__grid > figure img,
+.travel-horse-page figure img,
+.travel-yurts-page__feature img,
+.travel-snowboard-page__lead img,
+.travel-lessons-page figure img,
+.travel-heliski-page > img,
+.travel-freeride-page__body > img {
+    height: clamp(290px, 36vw, 470px);
+}
+
+.travel-mountain-page__body,
+.travel-flight-page,
+.travel-buggy-page__main,
+.travel-translator-page__details,
+.travel-driver-page__grid,
+.travel-horse-page,
+.travel-yurts-page__feature,
+.travel-snowboard-page__lead,
+.travel-lessons-page__body,
+.travel-heliski-page,
+.travel-freeride-page__body {
+    gap: clamp(24px, 5vw, 68px);
+}
+
+.travel-order-page {
+    gap: clamp(28px, 6vw, 96px);
+}
+
+.travel-order-page__intro > h2 {
+    margin-bottom: 17px;
+}
+
+.travel-order-page__intro > a {
+    position: relative;
+    padding-bottom: 5px;
+    font-weight: 600;
+}
+
+.travel-order-form {
+    gap: 20px 26px;
+    align-content: start;
+}
+
+.travel-order-form label {
+    gap: 8px;
+    color: var(--color-primary-dark);
+    font-size: 12px;
+}
+
+.travel-order-form input,
+.travel-order-form select,
+.travel-order-form textarea {
+    min-height: 44px;
+    border-bottom-color: color-mix(in srgb, var(--color-primary-dark) 35%, transparent);
+    font-size: 14px;
+    transition: border-color 180ms ease;
+}
+
+.travel-order-form input:focus-visible,
+.travel-order-form select:focus-visible,
+.travel-order-form textarea:focus-visible {
+    border-bottom-color: var(--color-primary);
+    outline: 0;
+}
+
+.travel-order-form button {
+    padding-block: 13px;
+    font-size: 14px;
+}
+
+.travel-contacts-page__channels {
+    gap: 25px;
+    padding-block: 22px;
+}
+
+.travel-contacts-page__channels a {
+    width: fit-content;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.travel-contacts-page__bottom {
+    gap: clamp(28px, 6vw, 88px);
+    margin-top: clamp(28px, 5vw, 62px);
+}
+
+.travel-contacts-page__bottom img {
+    height: clamp(250px, 30vw, 390px);
+}
+
+.travel-contacts-page__bottom h3 {
+    margin-bottom: 12px;
+}
+
+.travel-page-link:focus-visible,
+.travel-tours-page__index a:focus-visible,
+.travel-order-page__intro a:focus-visible,
+.travel-contacts-page__channels a:focus-visible {
+    outline: 2px solid var(--color-accent-yellow);
+    outline-offset: 4px;
+}
+
+@media (max-width: 850px) {
+    .travel-home-page__photo {
+        width: 94%;
+    }
+
+    .travel-company-page__feature,
+    .travel-tours-city,
+    .travel-tours-lake,
+    .travel-tours-gorges,
+    .travel-tours-canyon,
+    .travel-order-page {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 650px) {
+    .site-content__page article h2 {
+        max-width: 18ch;
+        font-size: clamp(34px, 10vw, 46px);
+        line-height: 1.04;
+    }
+
+    .site-content__page article h3 {
+        font-size: clamp(23px, 7vw, 30px);
+    }
+
+    .site-content__page article p:not(.travel-kicker):not(.travel-season-note) {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .travel-home-page__heading {
+        gap: 16px;
+        margin-bottom: 28px;
+    }
+
+    .travel-home-page__heading > div h2 {
+        max-width: 17ch;
+    }
+
+    .travel-home-page__photo {
+        width: 100%;
+        margin-bottom: 48px;
+    }
+
+    .travel-home-page__photo img {
+        height: 280px;
+    }
+
+    .travel-home-page__next {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .travel-home-page__next nav {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 13px;
+    }
+
+    .travel-company-page__feature img,
+    .travel-tours-city img,
+    .travel-tours-lake > img,
+    .travel-tours-lakes__kolsai img,
+    .travel-tours-lakes__kaindy img,
+    .travel-tours-gorges__turgen img,
+    .travel-tours-gorges__butakovka img,
+    .travel-tours-canyon__charyn img,
+    .travel-tours-canyon__dune img,
+    .travel-mountain-page__photo img,
+    .travel-flight-page figure img,
+    .travel-buggy-page__main > img,
+    .travel-driver-page__grid > figure img,
+    .travel-horse-page figure img,
+    .travel-yurts-page__feature img,
+    .travel-snowboard-page__lead img,
+    .travel-lessons-page figure img,
+    .travel-heliski-page > img,
+    .travel-freeride-page__body > img,
+    .travel-contacts-page__bottom img {
+        height: 250px;
+    }
+
+    .travel-tours-city,
+    .travel-tours-lake,
+    .travel-tours-lakes,
+    .travel-tours-gorges,
+    .travel-tours-canyon {
+        padding-block: 34px;
+    }
+
+    .travel-contacts-page__channels {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 17px;
+    }
+
+    .travel-order-form {
+        gap: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .site-content__page figure img,
+    .site-content__page article > img,
+    .site-content__page article div > img,
+    .travel-page-link::after,
+    .travel-tours-page__index a::after {
+        scroll-behavior: auto;
+        transition: none;
+    }
+
+    .site-content__page .site-reveal img,
+    .site-content__page .site-reveal.is-visible img {
+        transform: none;
+    }
+}

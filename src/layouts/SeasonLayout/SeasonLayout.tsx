@@ -4,7 +4,8 @@ import {
     type SeasonRouteKey,
     type SiteSeason,
 } from "@/routes/season-routes";
-import { Link, NavLink, Outlet } from "react-router-dom";
+import { useEffect } from "react";
+import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import "./SeasonLayout.css";
 
 type SeasonLayoutProps = {
@@ -27,12 +28,41 @@ const menuItems: { label: string; route: SeasonRouteKey }[] = [
 ];
 
 const SeasonLayout = ({ season }: SeasonLayoutProps) => {
+    const { pathname } = useLocation();
     const routes = {
         home: getSeasonRoute(season, "main"),
         about: getSeasonRoute(season, "about"),
         order: getSeasonRoute(season, "order"),
         contacts: getSeasonRoute(season, "contacts"),
     };
+
+    useEffect(() => {
+        const page = document.querySelector(".site-content__page article");
+        const items = Array.from(page?.children ?? []) as HTMLElement[];
+
+        if (items.length === 0 || typeof IntersectionObserver === "undefined") {
+            return;
+        }
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) return;
+                    entry.target.classList.add("is-visible");
+                    observer.unobserve(entry.target);
+                });
+            },
+            { rootMargin: "0px 0px -8% 0px", threshold: 0.08 },
+        );
+
+        items.forEach((item, index) => {
+            item.classList.add("site-reveal");
+            item.style.setProperty("--reveal-index", String(index));
+            observer.observe(item);
+        });
+
+        return () => observer.disconnect();
+    }, [pathname]);
 
     return (
         <div className={`site-page site-page--${season}`}>
