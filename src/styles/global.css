@@ -1,0 +1,23 @@
+html {
+    scrollbar-color: var(--color-primary-light) var(--color-background-soft);
+    scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--color-background-soft);
+}
+
+*::-webkit-scrollbar-thumb {
+    border: 2px solid var(--color-background-soft);
+    border-radius: 8px;
+    background: var(--color-primary-light);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary);
+}

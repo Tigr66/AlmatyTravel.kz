@@ -1,5 +1,6 @@
 export const appRoutes = {
     WINTER_MAIN: "/",
+    WINTER_ABOUT: "/about",
     WINTER_ORDER: "/order",
     WINTER_CONTACTS: "/contacts",
 
@@ -18,6 +19,7 @@ export const appRoutes = {
     WINTER_FREERIDE: "/freeride",
 
     SUMMER_MAIN: "/summer",
+    SUMMER_ABOUT: "/summer/about",
     SUMMER_ORDER: "/summer/order",
     SUMMER_CONTACTS: "/summer/contacts",
 

@@ -1,4 +1,11 @@
-.winter-kicker {
+.travel-season-note {
+    margin-bottom: 12px;
+    color: var(--color-text-secondary);
+    font-size: 11px;
+    line-height: 1.55;
+}
+
+.travel-kicker {
     margin-bottom: 13px;
     color: var(--color-primary);
     font-size: 10px;
@@ -7,7 +14,7 @@
     line-height: 1.5;
 }
 
-.winter-page-link {
+.travel-page-link {
     display: inline-flex;
     width: fit-content;
     align-items: center;
@@ -22,72 +29,130 @@
     transition: color 140ms ease, border-color 140ms ease;
 }
 
-.winter-page-link:hover {
+.travel-page-link:hover {
     border-color: var(--color-accent-yellow);
     color: var(--color-primary);
 }
 
-.winter-home-page h2,
-.winter-tours-page h2,
-.winter-mountain-page h2,
-.winter-flight-page h2,
-.winter-buggy-page h2,
-.winter-translator-page h2,
-.winter-driver-page h2,
-.winter-horse-page h2,
-.winter-yurts-page h2,
-.winter-snowboard-page h2,
-.winter-lessons-page h2,
-.winter-heliski-page h2,
-.winter-freeride-page h2,
-.winter-order-page h2,
-.winter-contacts-page h2 {
+.travel-home-page h2,
+.travel-tours-page h2,
+.travel-mountain-page h2,
+.travel-flight-page h2,
+.travel-buggy-page h2,
+.travel-translator-page h2,
+.travel-driver-page h2,
+.travel-horse-page h2,
+.travel-yurts-page h2,
+.travel-snowboard-page h2,
+.travel-lessons-page h2,
+.travel-heliski-page h2,
+.travel-freeride-page h2,
+.travel-company-page h2,
+.travel-order-page h2,
+.travel-contacts-page h2 {
     font-size: clamp(28px, 3.4vw, 43px);
     font-weight: 600;
     letter-spacing: -0.045em;
     line-height: 1.1;
 }
 
-.winter-home-page h3,
-.winter-tours-page h3,
-.winter-mountain-page h3,
-.winter-flight-page h3,
-.winter-buggy-page h3,
-.winter-translator-page h3,
-.winter-driver-page h3,
-.winter-horse-page h3,
-.winter-yurts-page h3,
-.winter-snowboard-page h3,
-.winter-lessons-page h3,
-.winter-heliski-page h3,
-.winter-freeride-page h3,
-.winter-contacts-page h3 {
+.travel-home-page h3,
+.travel-tours-page h3,
+.travel-mountain-page h3,
+.travel-flight-page h3,
+.travel-buggy-page h3,
+.travel-translator-page h3,
+.travel-driver-page h3,
+.travel-horse-page h3,
+.travel-yurts-page h3,
+.travel-snowboard-page h3,
+.travel-lessons-page h3,
+.travel-heliski-page h3,
+.travel-freeride-page h3,
+.travel-company-page h3,
+.travel-contacts-page h3 {
     font-size: 20px;
     font-weight: 600;
     letter-spacing: -0.02em;
     line-height: 1.25;
 }
 
-.winter-home-page img,
-.winter-tours-page img,
-.winter-mountain-page img,
-.winter-flight-page img,
-.winter-buggy-page img,
-.winter-translator-page img,
-.winter-driver-page img,
-.winter-horse-page img,
-.winter-yurts-page img,
-.winter-snowboard-page img,
-.winter-lessons-page img,
-.winter-heliski-page img,
-.winter-freeride-page img,
-.winter-contacts-page img {
+.travel-home-page img,
+.travel-tours-page img,
+.travel-mountain-page img,
+.travel-flight-page img,
+.travel-buggy-page img,
+.travel-translator-page img,
+.travel-driver-page img,
+.travel-horse-page img,
+.travel-yurts-page img,
+.travel-snowboard-page img,
+.travel-lessons-page img,
+.travel-heliski-page img,
+.travel-freeride-page img,
+.travel-company-page img,
+.travel-contacts-page img {
     display: block;
     width: 100%;
     object-fit: cover;
 }
 
-.winter-home-page__heading {
+.travel-company-page header {
+    max-width: 740px;
+    margin-bottom: 24px;
+}
+
+.travel-company-page header > p:last-child,
+.travel-company-page__feature > div > p {
+    margin-top: 12px;
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.travel-company-page__feature {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    align-items: center;
+    gap: 28px;
+}
+
+.travel-company-page__feature img {
+    height: clamp(240px, 32vw, 360px);
+}
+
+.travel-company-page__feature figcaption {
+    padding-top: 8px;
+    color: var(--color-text-secondary);
+    font-size: 10px;
+}
+
+.travel-company-page__feature dl {
+    margin: 17px 0;
+    border-top: 1px solid var(--color-border);
+}
+
+.travel-company-page__feature dl div {
+    display: grid;
+    grid-template-columns: 125px 1fr;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.travel-company-page__feature dt {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.travel-company-page__feature dd {
+    margin: 0;
+    color: var(--color-text-secondary);
+}
+
+.travel-home-page__heading {
     display: grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(230px, 0.7fr);
     align-items: end;
@@ -95,108 +160,83 @@
     margin-bottom: 26px;
 }
 
-.winter-home-page__heading > div h2 {
+.travel-home-page__heading > div h2 {
     max-width: 620px;
 }
 
-.winter-home-page__heading > p,
-.winter-tours-page__intro > p:last-child,
-.winter-tours-city p,
-.winter-tours-lake p,
-.winter-tours-gorges p,
-.winter-tours-canyon p,
-.winter-mountain-page header > p:last-child,
-.winter-flight-page__lead > p:not(.winter-kicker),
-.winter-buggy-page header > p:last-child,
-.winter-translator-page header > p:last-child,
-.winter-driver-page header > p:last-child,
-.winter-horse-page > div > p:not(.winter-kicker),
-.winter-yurts-page header > p:last-child,
-.winter-snowboard-page__lead > div > p:not(.winter-kicker),
-.winter-lessons-page header > p:last-child,
-.winter-heliski-page > div > p:not(.winter-kicker),
-.winter-freeride-page header > p:last-child,
-.winter-order-page__intro > p:not(.winter-kicker),
-.winter-contacts-page header > p:last-child {
+.travel-home-page__heading > p,
+.travel-tours-page__intro > p:last-child,
+.travel-tours-city p,
+.travel-tours-lake p,
+.travel-tours-gorges p,
+.travel-tours-canyon p,
+.travel-mountain-page header > p:last-child,
+.travel-flight-page__lead > p:not(.travel-kicker),
+.travel-buggy-page header > p:last-child,
+.travel-translator-page header > p:last-child,
+.travel-driver-page header > p:last-child,
+.travel-horse-page > div > p:not(.travel-kicker),
+.travel-yurts-page header > p:last-child,
+.travel-snowboard-page__lead > div > p:not(.travel-kicker),
+.travel-lessons-page header > p:last-child,
+.travel-heliski-page > div > p:not(.travel-kicker),
+.travel-freeride-page header > p:last-child,
+.travel-order-page__intro > p:not(.travel-kicker),
+.travel-contacts-page header > p:last-child {
     color: var(--color-text-secondary);
     font-size: 14px;
     line-height: 1.65;
 }
 
-.winter-home-page__photo img {
+.travel-home-page__photo img {
     height: clamp(230px, 32vw, 370px);
     object-position: center 48%;
 }
 
-.winter-home-page__photo figcaption,
-.winter-tours-lakes figcaption,
-.winter-tours-gorges figcaption,
-.winter-tours-canyon figcaption,
-.winter-mountain-page__photo figcaption,
-.winter-flight-page figure figcaption,
-.winter-translator-page figure figcaption,
-.winter-driver-page figure figcaption,
-.winter-horse-page figure figcaption,
-.winter-lessons-page figure figcaption {
+.travel-home-page__photo figcaption,
+.travel-tours-lakes figcaption,
+.travel-tours-gorges figcaption,
+.travel-tours-canyon figcaption,
+.travel-mountain-page__photo figcaption,
+.travel-flight-page figure figcaption,
+.travel-translator-page figure figcaption,
+.travel-driver-page figure figcaption,
+.travel-horse-page figure figcaption,
+.travel-lessons-page figure figcaption {
     padding-top: 8px;
     color: var(--color-text-secondary);
     font-size: 10px;
     line-height: 1.5;
 }
 
-.winter-home-page__facts {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
-    margin: 20px 0 30px;
-    padding: 15px 0;
-    border-top: 1px solid var(--color-border);
-    border-bottom: 1px solid var(--color-border);
-}
-
-.winter-home-page__facts p {
-    display: grid;
-    gap: 3px;
-}
-
-.winter-home-page__facts strong {
-    font-size: 22px;
-    font-weight: 600;
-}
-
-.winter-home-page__facts span {
-    color: var(--color-text-secondary);
-    font-size: 11px;
-}
-
-.winter-home-page__next {
+.travel-home-page__next {
     display: grid;
     grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
     gap: 28px;
     align-items: start;
 }
 
-.winter-home-page__next h3 {
+.travel-home-page__next h3 {
     max-width: 320px;
 }
 
-.winter-home-page__next nav {
+.travel-home-page__next nav {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 14px 24px;
 }
 
-.winter-tours-page__intro {
+.travel-tours-page__intro {
     max-width: 740px;
     margin-bottom: 25px;
 }
 
-.winter-tours-page__intro > p:last-child {
+.travel-tours-page__intro > p:last-child {
     max-width: 660px;
     margin-top: 14px;
 }
 
-.winter-tours-page__index {
+.travel-tours-page__index {
     display: flex;
     flex-wrap: wrap;
     gap: 8px 18px;
@@ -205,19 +245,19 @@
     border-bottom: 1px solid var(--color-border);
 }
 
-.winter-tours-page__index a {
+.travel-tours-page__index a {
     color: var(--color-primary-dark);
     font-size: 12px;
     text-decoration: none;
 }
 
-.winter-tours-page__index a:hover {
+.travel-tours-page__index a:hover {
     color: var(--color-primary);
     text-decoration: underline;
     text-underline-offset: 3px;
 }
 
-.winter-tours-city {
+.travel-tours-city {
     display: grid;
     grid-template-columns: minmax(0, 1.15fr) minmax(240px, 0.85fr);
     gap: 28px;
@@ -226,15 +266,15 @@
     border-bottom: 1px solid var(--color-border);
 }
 
-.winter-tours-city img {
+.travel-tours-city img {
     height: 270px;
 }
 
-.winter-tours-city .winter-page-link {
+.travel-tours-city .travel-page-link {
     margin-top: 17px;
 }
 
-.winter-tours-lake {
+.travel-tours-lake {
     display: grid;
     grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
     gap: 24px;
@@ -243,16 +283,16 @@
     border-bottom: 1px solid var(--color-border);
 }
 
-.winter-tours-lake__text {
+.travel-tours-lake__text {
     grid-row: span 2;
 }
 
-.winter-tours-lake__text dl {
+.travel-tours-lake__text dl {
     margin: 18px 0;
     border-top: 1px solid var(--color-border);
 }
 
-.winter-tours-lake__text dl div {
+.travel-tours-lake__text dl div {
     display: flex;
     justify-content: space-between;
     gap: 12px;
@@ -261,16 +301,16 @@
     font-size: 11px;
 }
 
-.winter-tours-lake__text dt {
+.travel-tours-lake__text dt {
     color: var(--color-text-secondary);
 }
 
-.winter-tours-lake__text dd {
+.travel-tours-lake__text dd {
     margin: 0;
     text-align: right;
 }
 
-.winter-tours-lakes {
+.travel-tours-lakes {
     display: grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
     gap: 22px;
@@ -278,41 +318,41 @@
     border-bottom: 1px solid var(--color-border);
 }
 
-.winter-tours-lakes > header,
-.winter-tours-lakes > .winter-page-link {
+.travel-tours-lakes > header,
+.travel-tours-lakes > .travel-page-link {
     grid-column: 1 / -1;
 }
 
-.winter-tours-lakes > header {
+.travel-tours-lakes > header {
     max-width: 640px;
 }
 
-.winter-tours-lakes > header p:last-child {
+.travel-tours-lakes > header p:last-child {
     margin-top: 12px;
     color: var(--color-text-secondary);
     font-size: 14px;
     line-height: 1.6;
 }
 
-.winter-tours-lakes__kolsai img {
+.travel-tours-lakes__kolsai img {
     height: 280px;
 }
 
-.winter-tours-lakes__kaindy {
+.travel-tours-lakes__kaindy {
     align-self: end;
 }
 
-.winter-tours-lakes__kaindy img {
+.travel-tours-lakes__kaindy img {
     height: 220px;
 }
 
-.winter-tours-lakes figcaption {
+.travel-tours-lakes figcaption {
     display: flex;
     justify-content: space-between;
     gap: 12px;
 }
 
-.winter-tours-gorges {
+.travel-tours-gorges {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(230px, 0.8fr);
     gap: 26px;
@@ -320,36 +360,36 @@
     border-bottom: 1px solid var(--color-border);
 }
 
-.winter-tours-gorges > header,
-.winter-tours-gorges > .winter-page-link {
+.travel-tours-gorges > header,
+.travel-tours-gorges > .travel-page-link {
     grid-column: 1 / -1;
 }
 
-.winter-tours-gorges__turgen img {
+.travel-tours-gorges__turgen img {
     height: 260px;
 }
 
-.winter-tours-gorges__turgen div {
+.travel-tours-gorges__turgen div {
     display: grid;
     grid-template-columns: minmax(100px, 0.45fr) minmax(0, 1fr);
     gap: 14px;
     padding-top: 12px;
 }
 
-.winter-tours-gorges__turgen p {
+.travel-tours-gorges__turgen p {
     font-size: 12px;
 }
 
-.winter-tours-gorges__butakovka {
+.travel-tours-gorges__butakovka {
     align-self: center;
 }
 
-.winter-tours-gorges__butakovka img {
+.travel-tours-gorges__butakovka img {
     height: 180px;
     margin-top: 12px;
 }
 
-.winter-tours-canyon {
+.travel-tours-canyon {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
     align-items: center;
@@ -357,29 +397,29 @@
     padding-top: 28px;
 }
 
-.winter-tours-canyon > .winter-page-link {
+.travel-tours-canyon > .travel-page-link {
     grid-column: 1 / -1;
 }
 
-.winter-tours-canyon__charyn img {
+.travel-tours-canyon__charyn img {
     height: 260px;
     margin-bottom: 14px;
 }
 
-.winter-tours-canyon__charyn p,
-.winter-tours-canyon__dune p {
+.travel-tours-canyon__charyn p,
+.travel-tours-canyon__dune p {
     margin-top: 10px;
     color: var(--color-text-secondary);
     font-size: 12px;
     line-height: 1.6;
 }
 
-.winter-tours-canyon__dune img {
+.travel-tours-canyon__dune img {
     height: 205px;
     margin-bottom: 14px;
 }
 
-.winter-image-credit {
+.travel-image-credit {
     display: block;
     margin: -7px 0 12px;
     color: var(--color-text-secondary);
@@ -387,26 +427,26 @@
     line-height: 1.45;
 }
 
-.winter-image-credit a {
+.travel-image-credit a {
     color: inherit;
     text-decoration: underline;
     text-underline-offset: 2px;
 }
 
-.winter-mountain-page header {
+.travel-mountain-page header {
     max-width: 720px;
     margin-bottom: 22px;
 }
 
-.winter-mountain-page header > p:last-child {
+.travel-mountain-page header > p:last-child {
     margin-top: 13px;
 }
 
-.winter-mountain-page__photo img {
+.travel-mountain-page__photo img {
     height: clamp(230px, 30vw, 350px);
 }
 
-.winter-mountain-page__body {
+.travel-mountain-page__body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 32px;
@@ -416,47 +456,47 @@
     border-bottom: 1px solid var(--color-border);
 }
 
-.winter-mountain-page__body ul {
+.travel-mountain-page__body ul {
     margin: 10px 0 0;
     padding-left: 18px;
     font-size: 12px;
     line-height: 1.85;
 }
 
-.winter-mountain-page__body p {
+.travel-mountain-page__body p {
     margin: 10px 0 16px;
     color: var(--color-text-secondary);
     font-size: 12px;
     line-height: 1.6;
 }
 
-.winter-mountain-page__links {
+.travel-mountain-page__links {
     display: flex;
     flex-wrap: wrap;
     gap: 14px 24px;
     margin-top: 18px;
 }
 
-.winter-flight-page {
+.travel-flight-page {
     display: grid;
     grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
     align-items: center;
     gap: 28px;
 }
 
-.winter-flight-page__lead > p:not(.winter-kicker) {
+.travel-flight-page__lead > p:not(.travel-kicker) {
     margin-top: 12px;
 }
 
-.winter-flight-page__lead .winter-page-link {
+.travel-flight-page__lead .travel-page-link {
     margin-top: 20px;
 }
 
-.winter-flight-page figure img {
+.travel-flight-page figure img {
     height: 380px;
 }
 
-.winter-buggy-page header {
+.travel-buggy-page header {
     display: grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(230px, 0.9fr);
     align-items: end;
@@ -464,22 +504,22 @@
     margin-bottom: 20px;
 }
 
-.winter-buggy-page header .winter-kicker {
+.travel-buggy-page header .travel-kicker {
     grid-column: 1 / -1;
     margin-bottom: -15px;
 }
 
-.winter-buggy-page__main {
+.travel-buggy-page__main {
     display: grid;
     grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
     gap: 26px;
 }
 
-.winter-buggy-page__main > img {
+.travel-buggy-page__main > img {
     height: 340px;
 }
 
-.winter-buggy-routes section {
+.travel-buggy-routes section {
     display: grid;
     grid-template-columns: 34px 1fr;
     gap: 12px;
@@ -487,24 +527,24 @@
     border-top: 1px solid var(--color-border);
 }
 
-.winter-buggy-routes section > span {
+.travel-buggy-routes section > span {
     color: var(--color-primary);
     font-size: 11px;
 }
 
-.winter-buggy-routes h3 {
+.travel-buggy-routes h3 {
     margin-bottom: 5px;
     font-size: 15px;
 }
 
-.winter-buggy-routes p,
-.winter-buggy-page__foot > p {
+.travel-buggy-routes p,
+.travel-buggy-page__foot > p {
     color: var(--color-text-secondary);
     font-size: 11px;
     line-height: 1.55;
 }
 
-.winter-buggy-page__foot {
+.travel-buggy-page__foot {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -514,36 +554,36 @@
     border-top: 1px solid var(--color-border);
 }
 
-.winter-buggy-page__foot p {
+.travel-buggy-page__foot p {
     max-width: 620px;
 }
 
-.winter-translator-page header {
+.travel-translator-page header {
     max-width: 680px;
     margin-bottom: 24px;
 }
 
-.winter-translator-page__details {
+.travel-translator-page__details {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
     gap: 28px;
     align-items: center;
 }
 
-.winter-translator-page__details img {
+.travel-translator-page__details img {
     height: 300px;
 }
 
-.winter-translator-page__details h3 {
+.travel-translator-page__details h3 {
     margin-bottom: 13px;
 }
 
-.winter-translator-page__details dl {
+.travel-translator-page__details dl {
     margin-bottom: 18px;
     border-top: 1px solid var(--color-border);
 }
 
-.winter-translator-page__details dl div {
+.travel-translator-page__details dl div {
     display: grid;
     grid-template-columns: 95px 1fr;
     gap: 12px;
@@ -553,38 +593,38 @@
     line-height: 1.5;
 }
 
-.winter-translator-page__details dt {
+.travel-translator-page__details dt {
     color: var(--color-text-secondary);
 }
 
-.winter-translator-page__details dd {
+.travel-translator-page__details dd {
     margin: 0;
 }
 
-.winter-driver-page header {
+.travel-driver-page header {
     max-width: 730px;
     margin-bottom: 22px;
 }
 
-.winter-driver-page__grid {
+.travel-driver-page__grid {
     display: grid;
     grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
     gap: 28px;
 }
 
-.winter-driver-page__grid > figure img {
+.travel-driver-page__grid > figure img {
     height: 350px;
 }
 
-.winter-driver-page__itineraries h3 {
+.travel-driver-page__itineraries h3 {
     margin-bottom: 12px;
 }
 
-.winter-driver-page__itineraries dl {
+.travel-driver-page__itineraries dl {
     border-top: 1px solid var(--color-border);
 }
 
-.winter-driver-page__itineraries dl div {
+.travel-driver-page__itineraries dl div {
     display: grid;
     grid-template-columns: 70px 1fr;
     gap: 12px;
@@ -594,74 +634,74 @@
     line-height: 1.5;
 }
 
-.winter-driver-page__itineraries dt {
+.travel-driver-page__itineraries dt {
     color: var(--color-primary);
     font-weight: 700;
 }
 
-.winter-driver-page__itineraries dd {
+.travel-driver-page__itineraries dd {
     margin: 0;
     color: var(--color-text-secondary);
 }
 
-.winter-driver-page__included {
+.travel-driver-page__included {
     margin: 15px 0;
     color: var(--color-text-secondary);
     font-size: 11px;
     line-height: 1.6;
 }
 
-.winter-driver-page__included strong {
+.travel-driver-page__included strong {
     color: var(--color-primary-dark);
 }
 
-.winter-horse-page {
+.travel-horse-page {
     display: grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
     align-items: center;
     gap: 28px;
 }
 
-.winter-horse-page figure img {
+.travel-horse-page figure img {
     height: 380px;
 }
 
-.winter-horse-page > div > p:not(.winter-kicker) {
+.travel-horse-page > div > p:not(.travel-kicker) {
     margin: 13px 0;
 }
 
-.winter-horse-page .winter-page-link {
+.travel-horse-page .travel-page-link {
     margin-top: 9px;
 }
 
-.winter-yurts-page header {
+.travel-yurts-page header {
     max-width: 700px;
     margin-bottom: 22px;
 }
 
-.winter-yurts-page header > p:last-child {
+.travel-yurts-page header > p:last-child {
     margin-top: 12px;
 }
 
-.winter-yurts-page__feature {
+.travel-yurts-page__feature {
     display: grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
     align-items: center;
     gap: 26px;
 }
 
-.winter-yurts-page__feature img {
+.travel-yurts-page__feature img {
     height: 320px;
 }
 
-.winter-yurts-page__feature p {
+.travel-yurts-page__feature p {
     margin: 12px 0 18px;
     color: var(--color-text-secondary);
     font-size: 13px;
     line-height: 1.6;
 }
 
-.winter-yurts-page__note {
+.travel-yurts-page__note {
     max-width: 570px;
     margin-top: 14px;
     color: var(--color-text-secondary);
@@ -669,22 +709,22 @@
     line-height: 1.5;
 }
 
-.winter-snowboard-page__lead {
+.travel-snowboard-page__lead {
     display: grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
     gap: 28px;
     align-items: center;
 }
 
-.winter-snowboard-page__lead img {
+.travel-snowboard-page__lead img {
     height: 340px;
 }
 
-.winter-snowboard-page__lead > div > p:not(.winter-kicker) {
+.travel-snowboard-page__lead > div > p:not(.travel-kicker) {
     margin: 13px 0 18px;
 }
 
-.winter-snowboard-page__note {
+.travel-snowboard-page__note {
     display: grid;
     grid-template-columns: minmax(180px, 0.5fr) 1fr;
     gap: 18px;
@@ -696,37 +736,37 @@
     line-height: 1.55;
 }
 
-.winter-snowboard-page__note strong {
+.travel-snowboard-page__note strong {
     color: var(--color-primary-dark);
 }
 
-.winter-lessons-page header {
+.travel-lessons-page header {
     max-width: 700px;
     margin-bottom: 20px;
 }
 
-.winter-lessons-page header > p:last-child {
+.travel-lessons-page header > p:last-child {
     margin-top: 12px;
 }
 
-.winter-lessons-page__body {
+.travel-lessons-page__body {
     display: grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
     gap: 26px;
 }
 
-.winter-lessons-page figure img {
+.travel-lessons-page figure img {
     height: 300px;
 }
 
-.winter-lessons-page__body > div > p:not(.winter-lessons-page__secondary) {
+.travel-lessons-page__body > div > p:not(.travel-lessons-page__secondary) {
     margin: 12px 0 16px;
     color: var(--color-text-secondary);
     font-size: 13px;
     line-height: 1.6;
 }
 
-.winter-lessons-page__secondary {
+.travel-lessons-page__secondary {
     margin: 24px 0 10px;
     padding-top: 13px;
     border-top: 1px solid var(--color-border);
@@ -735,83 +775,83 @@
     line-height: 1.5;
 }
 
-.winter-heliski-page {
+.travel-heliski-page {
     display: grid;
     grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
     align-items: center;
     gap: 28px;
 }
 
-.winter-heliski-page > img {
+.travel-heliski-page > img {
     height: 400px;
 }
 
-.winter-heliski-page > div > p:not(.winter-kicker) {
+.travel-heliski-page > div > p:not(.travel-kicker) {
     margin: 13px 0;
 }
 
-.winter-heliski-page__note {
+.travel-heliski-page__note {
     padding-left: 13px;
     border-left: 2px solid var(--color-accent-yellow);
 }
 
-.winter-heliski-page .winter-page-link {
+.travel-heliski-page .travel-page-link {
     margin-top: 7px;
 }
 
-.winter-freeride-page header {
+.travel-freeride-page header {
     max-width: 730px;
     margin-bottom: 22px;
 }
 
-.winter-freeride-page header > p:last-child {
+.travel-freeride-page header > p:last-child {
     margin-top: 12px;
 }
 
-.winter-freeride-page__body {
+.travel-freeride-page__body {
     display: grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(230px, 0.9fr);
     gap: 28px;
 }
 
-.winter-freeride-page__body img {
+.travel-freeride-page__body img {
     height: 320px;
 }
 
-.winter-freeride-page__body h3 {
+.travel-freeride-page__body h3 {
     margin-bottom: 11px;
 }
 
-.winter-freeride-page__body ul {
+.travel-freeride-page__body ul {
     margin: 0 0 13px;
     padding: 0;
     list-style: none;
 }
 
-.winter-freeride-page__body li {
+.travel-freeride-page__body li {
     padding: 9px 0;
     border-top: 1px solid var(--color-border);
     font-size: 12px;
 }
 
-.winter-freeride-page__body p {
+.travel-freeride-page__body p {
     margin: 13px 0 18px;
     color: var(--color-text-secondary);
     font-size: 11px;
     line-height: 1.55;
 }
 
-.winter-order-page {
+.travel-order-page {
     display: grid;
     grid-template-columns: minmax(0, 0.85fr) minmax(280px, 1.15fr);
     gap: 34px;
 }
 
-.winter-order-page__intro > p:not(.winter-kicker) {
+.travel-order-page__intro > p:not(.travel-kicker) {
     margin: 13px 0 18px;
 }
 
-.winter-order-page__intro > a {
+.travel-order-page__intro > a {
     display: block;
     width: fit-content;
     margin-top: 11px;
@@ -821,22 +861,22 @@
     text-decoration: none;
 }
 
-.winter-order-form {
+.travel-order-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px 18px;
 }
 
-.winter-order-form label {
+.travel-order-form label {
     display: grid;
     gap: 6px;
     font-size: 11px;
     font-weight: 700;
 }
 
-.winter-order-form input,
-.winter-order-form select,
-.winter-order-form textarea {
+.travel-order-form input,
+.travel-order-form select,
+.travel-order-form textarea {
     width: 100%;
     min-height: 38px;
     padding: 8px 0;
@@ -851,23 +891,23 @@
     font-weight: 400;
 }
 
-.winter-order-form input:focus,
-.winter-order-form select:focus,
-.winter-order-form textarea:focus {
+.travel-order-form input:focus,
+.travel-order-form select:focus,
+.travel-order-form textarea:focus {
     border-bottom-color: var(--color-primary);
 }
 
-.winter-order-form__message,
-.winter-order-form button,
-.winter-order-form > p {
+.travel-order-form__message,
+.travel-order-form button,
+.travel-order-form > p {
     grid-column: 1 / -1;
 }
 
-.winter-order-form textarea {
+.travel-order-form textarea {
     resize: vertical;
 }
 
-.winter-order-form button {
+.travel-order-form button {
     display: flex;
     width: fit-content;
     align-items: center;
@@ -883,22 +923,22 @@
     cursor: pointer;
 }
 
-.winter-order-form > p {
+.travel-order-form > p {
     margin: -6px 0 0;
     color: var(--color-text-secondary);
     font-size: 10px;
 }
 
-.winter-contacts-page header {
+.travel-contacts-page header {
     max-width: 660px;
     margin-bottom: 22px;
 }
 
-.winter-contacts-page header > p:last-child {
+.travel-contacts-page header > p:last-child {
     margin-top: 12px;
 }
 
-.winter-contacts-page__channels {
+.travel-contacts-page__channels {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
@@ -907,18 +947,18 @@
     border-bottom: 1px solid var(--color-border);
 }
 
-.winter-contacts-page__channels a {
+.travel-contacts-page__channels a {
     color: var(--color-primary-dark);
     font-size: 13px;
     font-weight: 600;
     text-decoration: none;
 }
 
-.winter-contacts-page__channels a:hover {
+.travel-contacts-page__channels a:hover {
     color: var(--color-primary);
 }
 
-.winter-contacts-page__channels span {
+.travel-contacts-page__channels span {
     display: block;
     margin-bottom: 6px;
     color: var(--color-text-secondary);
@@ -926,7 +966,7 @@
     letter-spacing: 0.1em;
 }
 
-.winter-contacts-page__bottom {
+.travel-contacts-page__bottom {
     display: grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
     gap: 26px;
@@ -934,11 +974,11 @@
     margin-top: 22px;
 }
 
-.winter-contacts-page__bottom img {
+.travel-contacts-page__bottom img {
     height: 220px;
 }
 
-.winter-contacts-page__bottom p {
+.travel-contacts-page__bottom p {
     margin: 10px 0 17px;
     color: var(--color-text-secondary);
     font-size: 13px;
@@ -946,138 +986,132 @@
 }
 
 @media (max-width: 850px) {
-    .winter-home-page__heading,
-    .winter-home-page__next,
-    .winter-tours-city,
-    .winter-tours-lake,
-    .winter-tours-gorges,
-    .winter-tours-canyon,
-    .winter-flight-page,
-    .winter-buggy-page__main,
-    .winter-translator-page__details,
-    .winter-driver-page__grid,
-    .winter-horse-page,
-    .winter-yurts-page__feature,
-    .winter-snowboard-page__lead,
-    .winter-lessons-page__body,
-    .winter-heliski-page,
-    .winter-freeride-page__body,
-    .winter-order-page,
-    .winter-contacts-page__bottom {
+    .travel-home-page__heading,
+    .travel-home-page__next,
+    .travel-company-page__feature,
+    .travel-tours-city,
+    .travel-tours-lake,
+    .travel-tours-gorges,
+    .travel-tours-canyon,
+    .travel-flight-page,
+    .travel-buggy-page__main,
+    .travel-translator-page__details,
+    .travel-driver-page__grid,
+    .travel-horse-page,
+    .travel-yurts-page__feature,
+    .travel-snowboard-page__lead,
+    .travel-lessons-page__body,
+    .travel-heliski-page,
+    .travel-freeride-page__body,
+    .travel-order-page,
+    .travel-contacts-page__bottom {
         gap: 20px;
     }
 }
 
 @media (max-width: 650px) {
-    .winter-home-page__heading,
-    .winter-home-page__next,
-    .winter-home-page__next nav,
-    .winter-tours-city,
-    .winter-tours-lake,
-    .winter-tours-lakes,
-    .winter-tours-gorges,
-    .winter-tours-canyon,
-    .winter-mountain-page__body,
-    .winter-flight-page,
-    .winter-buggy-page header,
-    .winter-buggy-page__main,
-    .winter-translator-page__details,
-    .winter-driver-page__grid,
-    .winter-horse-page,
-    .winter-yurts-page__feature,
-    .winter-snowboard-page__lead,
-    .winter-snowboard-page__note,
-    .winter-lessons-page__body,
-    .winter-heliski-page,
-    .winter-freeride-page__body,
-    .winter-order-page,
-    .winter-order-form,
-    .winter-contacts-page__channels,
-    .winter-contacts-page__bottom {
+    .travel-home-page__heading,
+    .travel-home-page__next,
+    .travel-company-page__feature,
+    .travel-home-page__next nav,
+    .travel-tours-city,
+    .travel-tours-lake,
+    .travel-tours-lakes,
+    .travel-tours-gorges,
+    .travel-tours-canyon,
+    .travel-mountain-page__body,
+    .travel-flight-page,
+    .travel-buggy-page header,
+    .travel-buggy-page__main,
+    .travel-translator-page__details,
+    .travel-driver-page__grid,
+    .travel-horse-page,
+    .travel-yurts-page__feature,
+    .travel-snowboard-page__lead,
+    .travel-snowboard-page__note,
+    .travel-lessons-page__body,
+    .travel-heliski-page,
+    .travel-freeride-page__body,
+    .travel-order-page,
+    .travel-order-form,
+    .travel-contacts-page__channels,
+    .travel-contacts-page__bottom {
         grid-template-columns: minmax(0, 1fr);
     }
 
-    .winter-home-page__heading,
-    .winter-home-page__next,
-    .winter-tours-city,
-    .winter-tours-lake,
-    .winter-tours-gorges,
-    .winter-tours-canyon,
-    .winter-mountain-page__body,
-    .winter-flight-page,
-    .winter-buggy-page__main,
-    .winter-translator-page__details,
-    .winter-driver-page__grid,
-    .winter-horse-page,
-    .winter-yurts-page__feature,
-    .winter-snowboard-page__lead,
-    .winter-lessons-page__body,
-    .winter-heliski-page,
-    .winter-freeride-page__body,
-    .winter-contacts-page__bottom {
+    .travel-home-page__heading,
+    .travel-home-page__next,
+    .travel-tours-city,
+    .travel-tours-lake,
+    .travel-tours-gorges,
+    .travel-tours-canyon,
+    .travel-mountain-page__body,
+    .travel-flight-page,
+    .travel-buggy-page__main,
+    .travel-translator-page__details,
+    .travel-driver-page__grid,
+    .travel-horse-page,
+    .travel-yurts-page__feature,
+    .travel-snowboard-page__lead,
+    .travel-lessons-page__body,
+    .travel-heliski-page,
+    .travel-freeride-page__body,
+    .travel-contacts-page__bottom {
         gap: 17px;
     }
 
-    .winter-home-page__photo img,
-    .winter-tours-city img,
-    .winter-tours-lakes__kolsai img,
-    .winter-tours-lakes__kaindy img,
-    .winter-tours-gorges__turgen img,
-    .winter-tours-gorges__butakovka img,
-    .winter-tours-canyon__charyn img,
-    .winter-tours-canyon__dune img,
-    .winter-mountain-page__photo img,
-    .winter-flight-page figure img,
-    .winter-buggy-page__main > img,
-    .winter-translator-page__details img,
-    .winter-driver-page__grid > figure img,
-    .winter-horse-page figure img,
-    .winter-yurts-page__feature img,
-    .winter-snowboard-page__lead img,
-    .winter-lessons-page figure img,
-    .winter-heliski-page > img,
-    .winter-freeride-page__body img,
-    .winter-contacts-page__bottom img {
+    .travel-home-page__photo img,
+    .travel-company-page__feature img,
+    .travel-tours-city img,
+    .travel-tours-lakes__kolsai img,
+    .travel-tours-lakes__kaindy img,
+    .travel-tours-gorges__turgen img,
+    .travel-tours-gorges__butakovka img,
+    .travel-tours-canyon__charyn img,
+    .travel-tours-canyon__dune img,
+    .travel-mountain-page__photo img,
+    .travel-flight-page figure img,
+    .travel-buggy-page__main > img,
+    .travel-translator-page__details img,
+    .travel-driver-page__grid > figure img,
+    .travel-horse-page figure img,
+    .travel-yurts-page__feature img,
+    .travel-snowboard-page__lead img,
+    .travel-lessons-page figure img,
+    .travel-heliski-page > img,
+    .travel-freeride-page__body img,
+    .travel-contacts-page__bottom img {
         height: 220px;
     }
 
-    .winter-home-page__facts,
-    .winter-mountain-page__links,
-    .winter-buggy-page__foot {
+    .travel-mountain-page__links,
+    .travel-buggy-page__foot {
         align-items: start;
         flex-direction: column;
     }
 
-    .winter-home-page__facts {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .winter-home-page__facts p:last-child {
-        grid-column: 1 / -1;
-    }
-
-    .winter-tours-lake__text,
-    .winter-tours-lakes > header,
-    .winter-tours-lakes > .winter-page-link,
-    .winter-tours-gorges > header,
-    .winter-tours-gorges > .winter-page-link,
-    .winter-tours-canyon > .winter-page-link {
+    .travel-tours-lake__text,
+    .travel-tours-lakes > header,
+    .travel-tours-lakes > .travel-page-link,
+    .travel-tours-gorges > header,
+    .travel-tours-gorges > .travel-page-link,
+    .travel-tours-canyon > .travel-page-link {
         grid-column: 1;
         grid-row: auto;
     }
 
-    .winter-tours-lakes__kaindy {
+    .travel-tours-lakes__kaindy {
         margin-left: 18%;
     }
 
-    .winter-tours-gorges__turgen div {
+    .travel-tours-gorges__turgen div {
         grid-template-columns: minmax(0, 1fr);
         gap: 6px;
     }
 
-    .winter-order-form__message,
-    .winter-order-form button,
-    .winter-order-form > p {
+    .travel-order-form__message,
+    .travel-order-form button,
+    .travel-order-form > p {
         grid-column: 1;
     }
 }

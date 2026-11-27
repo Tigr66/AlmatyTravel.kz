@@ -37,64 +37,24 @@
     text-transform: uppercase;
 }
 
-.site-nav {
-    display: flex;
-    align-items: stretch;
-    min-height: 56px;
-    padding: 0 10px;
-    border: 1px solid rgb(255 255 255 / 58%);
-    border-radius: 32px;
-    background: rgb(255 255 255 / 48%);
-}
-
-.site-nav__link {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 0 22px;
-    color: var(--color-primary-dark);
-    font-size: 15px;
-    text-decoration: none;
-    white-space: nowrap;
-}
-
-.site-nav__link + .site-nav__link::before {
-    position: absolute;
-    top: 15px;
-    bottom: 15px;
-    left: 0;
-    width: 1px;
-    background: rgb(23 107 155 / 32%);
-    content: "";
-}
-
-.site-nav__link--active {
-    font-weight: 700;
-}
-
-.site-nav__link--active::after {
-    position: absolute;
-    right: 18px;
-    bottom: 0;
-    left: 18px;
-    height: 3px;
-    background: var(--color-primary);
-    content: "";
-}
-
-.site-nav__link svg {
-    width: 20px;
-    height: 20px;
-    fill: currentColor;
-}
-
 .site-header__contact {
     justify-self: end;
     display: grid;
     justify-items: end;
-    gap: 10px;
+    gap: 6px;
+}
+
+.site-header__season {
+    color: inherit;
+    font-size: 11px;
+    text-decoration: none;
+    text-underline-offset: 3px;
+    transition: color 140ms ease;
+}
+
+.site-header__season:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
 }
 
 .site-header__languages {
@@ -116,22 +76,6 @@
 .site-header__languages button[aria-current="true"] {
     border-bottom: 2px solid var(--color-accent-yellow);
     font-weight: 700;
-}
-
-.site-header__menu {
-    display: grid;
-    place-items: center;
-    padding: 0;
-    border: 0;
-    background: none;
-    color: var(--color-primary);
-    cursor: pointer;
-}
-
-.site-header__menu svg {
-    width: 17px;
-    height: 17px;
-    fill: currentColor;
 }
 
 .site-header__details {
@@ -187,29 +131,12 @@
         font-size: 12px;
     }
 
+    .site-header__season {
+        font-size: 9px;
+    }
+
     .site-header__details {
         display: none;
     }
 
-    .site-nav {
-        width: 100%;
-        min-height: 48px;
-        padding: 0 4px;
-        border-radius: 26px;
-    }
-
-    .site-nav__link {
-        flex: 1;
-        padding: 0 7px;
-        font-size: 11px;
-    }
-
-    .site-nav__link:first-child {
-        gap: 4px;
-    }
-
-    .site-nav__link svg {
-        width: 15px;
-        height: 15px;
-    }
 }

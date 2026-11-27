@@ -1,13 +1,18 @@
-import { appRoutes } from "@/routes/app-routes";
 import { Link } from "react-router-dom";
 import "./Header.css";
 
-const Header = () => {
+type HeaderProps = {
+    homePath: string;
+    seasonPath: string;
+    seasonLabel: string;
+};
+
+const Header = ({ homePath, seasonPath, seasonLabel }: HeaderProps) => {
     return (
         <header className="site-header">
             <Link
                 className="site-brand"
-                to={appRoutes.WINTER_MAIN}
+                to={homePath}
                 aria-label="Kazakhstan Travel Agency — главная"
             >
                 <img
@@ -35,6 +40,9 @@ const Header = () => {
                         Рус
                     </button>
                 </div>
+                <Link className="site-header__season" to={seasonPath}>
+                    {seasonLabel} <span aria-hidden="true">↗</span>
+                </Link>
             </div>
         </header>
     );

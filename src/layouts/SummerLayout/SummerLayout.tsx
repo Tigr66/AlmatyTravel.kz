@@ -1,8 +1,5 @@
-import { Header } from "@/components/Header";
-import "./SummerLayout.css";
+import SeasonLayout from "@/layouts/SeasonLayout/SeasonLayout";
 
-const SummerLayout = () => {
-    return <Header />;
-};
+const SummerLayout = () => <SeasonLayout season="summer" />;
 
 export default SummerLayout;
