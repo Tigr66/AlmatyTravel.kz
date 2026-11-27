@@ -1,12 +1,13 @@
 import { appRoutes } from "@/routes/app-routes";
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 const Header = () => {
     return (
         <header className="site-header">
-            <a
+            <Link
                 className="site-brand"
-                href={appRoutes.WINTER_MAIN}
+                to={appRoutes.WINTER_MAIN}
                 aria-label="Kazakhstan Travel Agency — главная"
             >
                 <img
@@ -19,7 +20,7 @@ const Header = () => {
                     <br />
                     Travel Agency
                 </span>
-            </a>
+            </Link>
             <div className="site-header__details">
                 <a href="tel:+77775259885">+7 777 525 98 85</a>
                 <a href="mailto:kztravel@mail.ru">kztravel@mail.ru</a>
@@ -27,12 +28,12 @@ const Header = () => {
 
             <div className="site-header__contact">
                 <div className="site-header__languages" aria-label="Язык сайта">
-                    <a href="#english" lang="en">
+                    <button type="button" lang="en">
                         Eng
-                    </a>
-                    <a href="#russian" lang="ru" aria-current="true">
+                    </button>
+                    <button type="button" lang="ru" aria-current="true">
                         Рус
-                    </a>
+                    </button>
                 </div>
             </div>
         </header>
